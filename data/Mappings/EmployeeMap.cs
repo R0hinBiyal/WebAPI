@@ -9,7 +9,7 @@ namespace api.Mappings
 {
     public class EmployeeMap
     {
-        public EmployeeMap(EntityTypeBuilder<Employe> tb)
+        public EmployeeMap(EntityTypeBuilder<Employee> tb)
         {
             tb.HasKey(x => x.Id);
             tb.Property(x => x.Name).HasMaxLength(40);
