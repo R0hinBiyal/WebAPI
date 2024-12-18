@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using api.Mappings;
+using Microsoft.EntityFrameworkCore;
+using models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,7 @@ namespace data.Context
         public DataContext(DbContextOptions<DataContext> options): base(options) { }
 
         public DbSet<Employee> Employee { get; set; }
-
+   
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            new EmployeeMap(modelBuilder.Entity<Employee>());
